@@ -22,16 +22,13 @@ const canvas = createCanvas(STRIP_WIDTH, STRIP_HEIGHT);
 const ctx = canvas.getContext('2d')
 const ws281x = require('rpi-ws281x');
 
-// Gör vad du vill med "ctx", jag fyller bara med lila...
-ctx.fillStyle = "green";
+// Gör vad du vill med "ctx", jag fyller bara med en färg...
+ctx.fillStyle = "blue";
 ctx.fillRect(0, 0, STRIP_WIDTH, STRIP_HEIGHT);
-
-// Hämta pixlarna
-var pixels = canvas.toBuffer('raw');
 
 // Konfigurera dina leds (https://www.npmjs.com/package/rpi-ws281x)
 // Det finns ett antal olika inställningar som dma/gpio etc...
 ws281x.configure({leds:STRIP_LEDS, type:STRIP_TYPE, dma:STRIP_DMA, gpio:STRIP_GPIO});
 
 // Rendrera!!
-ws281x.render(pixels);
+ws281x.render(canvas.toBuffer('raw'));
