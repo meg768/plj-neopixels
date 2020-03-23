@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "canvas": "^2.6.1",
-    "rpi-ws281x": "^1.0.30"
+    "rpi-ws281x": "^1.0.33"
   }
 }
