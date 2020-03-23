@@ -23,7 +23,7 @@ const ctx = canvas.getContext('2d')
 const ws281x = require('rpi-ws281x');
 
 // Gör vad du vill med "ctx", jag fyller bara med lila...
-ctx.fillStyle = "yellow";
+ctx.fillStyle = "purple";
 ctx.fillRect(0, 0, STRIP_WIDTH, STRIP_HEIGHT);
 
 // Hämta pixlarna
